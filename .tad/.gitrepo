@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/ingydotnet/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/creation-guidelines/tad-engine.git
+	branch = dist
+	commit = f61822bd24cb8403d48dd2bcc026be7128ffa6ee
+	parent = cd5ed8a7d00bb56c345527ecf6c937b6d26f74d3
+	method = merge
+	cmdver = 0.4.9
