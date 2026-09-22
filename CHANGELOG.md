@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.0 (2026-09-22)
+
+
+### Features
+
+* **data:** rebuild real content on the fresh template generation ([8ab8c34](https://github.com/creation-guidelines/software-engineering-canon/commit/8ab8c340869a41801b1e543589921d57fd748219))
+
 ## [1.2.0](https://github.com/creation-guidelines/text-as-data-template/compare/v1.1.2...v1.2.0) (2026-09-22)
 
 
