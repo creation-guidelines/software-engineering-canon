@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/creation-guidelines/software-engineering-canon/compare/v1.0.0...v1.1.0) (2026-09-22)
+
+
+### Features
+
+* **docs:** adopt the RFC-like minimal Pages style ([dce52f9](https://github.com/creation-guidelines/software-engineering-canon/commit/dce52f9a969c088de6331abade2a02e882c15fab))
+
 ## 1.0.0 (2026-09-22)
 
 
