@@ -1,0 +1,22 @@
+title: software-engineering-canon
+description: A curated canon of battle-tested software design principles, type-driven techniques and architectures.
+theme: null
+markdown: kramdown
+plugins:
+  - jekyll-optional-front-matter
+  - jekyll-titles-from-headings
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: false
+optional_front_matter:
+  remove_originals: true
+titles_from_headings:
+  enabled: true
+  strip_title: true
+  collection: false
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

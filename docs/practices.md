@@ -9,7 +9,8 @@ Habits and tooling that make the principles and architectures stick.
 
 Use crate or project references, dependency-rule linters and architecture tests; documentation alone is not enough.
 
-**Serves:** [Evolutionary architecture with fitness functions](architectures.md#evolutionary-architecture)
+Serves
+: [Evolutionary architecture with fitness functions](architectures.md#evolutionary-architecture)
 
 <a id="adr"></a>
 ### Architecture decision records
@@ -21,7 +22,8 @@ Record each significant decision together with its context.
 
 Fast core tests with in-memory adapters, contract tests per port, and few end-to-end tests.
 
-**Pairs with:** [Hexagonal architecture (ports and adapters)](architectures.md#hexagonal) (In-memory adapters make core tests fast.)
+Pairs with
+: [Hexagonal architecture (ports and adapters)](architectures.md#hexagonal) (In-memory adapters make core tests fast.)
 
 <a id="twelve-factor"></a>
 ### Twelve-factor discipline

@@ -50,19 +50,19 @@ def related(cid):
         add(FORWARD[rel], to_id, note)
     for from_id, rel, note in rows("SELECT from_id, relation, note FROM relations WHERE to_id = ? ORDER BY rowid", cid):
         add(BACKWARD[rel], from_id, note)
-    return [f"**{label}:** " + ", ".join(dict.fromkeys(items)) for label, items in parts.items()]
+    return [f"{label}\n: " + ", ".join(dict.fromkeys(items)) for label, items in parts.items()]
 
 
 def cited(cid):
     srcs = rows("""SELECT s.title, s.url FROM concept_sources cs JOIN sources s ON s.id = cs.source_id
                    WHERE cs.concept_id = ? ORDER BY s.rowid""", cid)
-    return [("**Sources:** " + ", ".join(f"[{t}]({u})" for t, u in srcs))] if srcs else []
+    return [("Sources\n: " + ", ".join(f"[{t}]({u})" for t, u in srcs))] if srcs else []
 
 
 def origin(author, year):
     if not author and not year:
         return []
-    return ["*Origin: " + ", ".join(str(x) for x in (author, year) if x) + "*"]
+    return ["Origin\n: " + ", ".join(str(x) for x in (author, year) if x)]
 
 
 def block(cid, name, paragraphs):
@@ -90,9 +90,9 @@ for category, heading in (("core", "Core principles"), ("type-driven", "Type-dri
             "SELECT id, name, statement, caveat, origin_author, origin_year, aliases FROM principles WHERE category = ? ORDER BY rowid", category):
         paras = [statement]
         if aliases:
-            paras.append("**Also known as:** " + ", ".join(aliases))
+            paras.append("Also known as\n: " + ", ".join(aliases))
         if caveat:
-            paras.append(f"**Watch out:** {caveat}")
+            paras.append("Watch out\n: " + caveat)
         paras += origin(author, year) + related(cid) + cited(cid)
         out += block(cid, name, paras)
 write("principles.md", out)
@@ -102,7 +102,7 @@ out = ["# Architectures", "",
        "Two independent axes: the macro structure of the system (modules and their boundaries) and the micro structure inside a module. Comparing them as rivals is a category error.", ""]
 for cid, name, essence, best_when, author, year in rows(
         "SELECT id, name, essence, best_when, origin_author, origin_year FROM architectures ORDER BY rowid"):
-    paras = [essence, f"**Best when:** {best_when}"] + origin(author, year) + related(cid) + cited(cid)
+    paras = [essence, "Best when\n: " + best_when] + origin(author, year) + related(cid) + cited(cid)
     out += block(cid, name, paras)
 write("architectures.md", out)
 
@@ -135,11 +135,11 @@ write("backlog.md", out)
 out = ["# Session Log", "", "One entry per significant decision: what was done, what was considered, what was rejected and why.", ""]
 for sid, title, entry_date, done, considered, rejected in rows(
         "SELECT id, title, entry_date, done, considered, rejected FROM session_log ORDER BY entry_date, rowid"):
-    paras = [f"*{entry_date}*", f"**Done:** {done}"]
+    paras = ["Date\n: " + str(entry_date), "Done\n: " + done]
     if considered:
-        paras.append(f"**Considered:** {considered}")
+        paras.append("Considered\n: " + considered)
     if rejected:
-        paras.append(f"**Rejected:** {rejected}")
+        paras.append("Rejected\n: " + rejected)
     out += block(sid, title, paras)
 write("session_log.md", out)
 

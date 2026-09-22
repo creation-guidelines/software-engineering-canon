@@ -10,4 +10,4 @@ Guiding idea: make the right thing easy and the wrong thing unrepresentable, and
 - [Practices](practices.md): 6
 - [Sources](sources.md): 7
 - [Backlog](backlog.md): 3 open of 3
-- [Session Log](session_log.md): 5
+- [Session Log](session_log.md): 6
