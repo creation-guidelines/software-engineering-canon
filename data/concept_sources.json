@@ -1,1 +1,9 @@
-{"concept_id":"example-one","source_id":"example-source"}
+{"concept_id":"hexagonal","source_id":"cockburn-hexagonal"}
+{"concept_id":"hexagonal","source_id":"aws-hexagonal"}
+{"concept_id":"parse-dont-validate","source_id":"king-parse"}
+{"concept_id":"illegal-states-unrepresentable","source_id":"deviq-illegal-states"}
+{"concept_id":"newtypes","source_id":"deviq-illegal-states"}
+{"concept_id":"modular-monolith","source_id":"appscale-modules-slices"}
+{"concept_id":"vertical-slice","source_id":"appscale-modules-slices"}
+{"concept_id":"functional-core-imperative-shell","source_id":"llousas-fcis"}
+{"concept_id":"demeter","source_id":"neu-law-of-demeter"}

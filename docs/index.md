@@ -1,8 +1,13 @@
-<!-- Generated from data/ by .tad/tools/render.py. Do not edit by hand. -->
+<!-- Generated from data/ by tools/render.py. Do not edit by hand. -->
 
-# Index
+# Software engineering canon
 
-- [Backlog](backlog.md): 7
-- [Concepts](concepts.md): 3
-- [Session Log](session_log.md): 6
-- [Sources](sources.md): 1
+A curated canon of battle-tested software design principles, type-driven techniques and architectures.
+Guiding idea: make the right thing easy and the wrong thing unrepresentable, and prefer structure the compiler and the module boundaries enforce over conventions people must remember.
+
+- [Principles](principles.md): 15
+- [Architectures](architectures.md): 8
+- [Practices](practices.md): 6
+- [Sources](sources.md): 7
+- [Backlog](backlog.md): 3 open of 3
+- [Session Log](session_log.md): 5

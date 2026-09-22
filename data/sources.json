@@ -1,1 +1,7 @@
-{"id":"example-source","title":"EXAMPLE: a source","url":"https://example.com/","author":"Example Author","year":2024}
+{"id":"cockburn-hexagonal","title":"Hexagonal architecture","url":"https://alistair.cockburn.us/hexagonal-architecture","author":"Alistair Cockburn","year":2005}
+{"id":"aws-hexagonal","title":"Hexagonal architecture pattern","url":"https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/hexagonal-architecture.html","author":"AWS Prescriptive Guidance","year":null}
+{"id":"king-parse","title":"Parse, don't validate","url":"https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/","author":"Alexis King","year":2019}
+{"id":"deviq-illegal-states","title":"Make illegal states unrepresentable","url":"https://deviq.com/principles/make-illegal-states-unrepresentable/","author":"DevIQ","year":null}
+{"id":"appscale-modules-slices","title":"Modules vs vertical slices: macro vs micro architecture","url":"https://appscale.blog/en/blog/modules-vs-vertical-slices-macro-vs-micro-architecture-modular-monolith-2026","author":"AppScale","year":2026}
+{"id":"llousas-fcis","title":"Building modern architectures: Functional Core, Imperative Shell","url":"https://medium.com/@allousas/building-modern-architectures-functional-core-imperative-shell-revamp-0bb5ae62b589","author":"Albert Llousas","year":2025}
+{"id":"neu-law-of-demeter","title":"Law of Demeter (General Formulation)","url":"https://www2.ccs.neu.edu/research/demeter/demeter-method/LawOfDemeter/general-formulation.html","author":"Northeastern University Demeter Project","year":null}

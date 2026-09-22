@@ -1,0 +1,6 @@
+{"id":"enforce-boundaries","name":"Enforce boundaries with tooling","description":"Use crate or project references, dependency-rule linters and architecture tests; documentation alone is not enough."}
+{"id":"adr","name":"Architecture decision records","description":"Record each significant decision together with its context."}
+{"id":"test-at-the-seams","name":"Test at the seams","description":"Fast core tests with in-memory adapters, contract tests per port, and few end-to-end tests."}
+{"id":"twelve-factor","name":"Twelve-factor discipline","description":"Keep configuration, logging and process handling disciplined and environment-independent."}
+{"id":"observability","name":"Observability as a port","description":"Structured logs, traces and metrics are a first-class outbound port, not an afterthought."}
+{"id":"ci-gatekeeper","name":"CI as the gatekeeper","description":"Format, lint, type-check and test on every change."}

@@ -1,74 +1,48 @@
-<!-- Generated from data/ by .tad/tools/render.py. Do not edit by hand. -->
+<!-- Generated from data/ by tools/render.py. Do not edit by hand. -->
 
 # Session Log
 
-<a id="duckdb-jsonl-storage"></a>
-### Chose DuckDB + JSONL as the storage format
+One entry per significant decision: what was done, what was considered, what was rejected and why.
 
-**Entry date:** 2026-09-21
+<a id="research-then-seed-canon"></a>
+### Researched engineering principles and seeded the canon
 
-**Done:** Adopted DuckDB's EXPORT DATABASE layout (schema.sql, load.sql, one JSON-lines file per table) as the on-disk format for text-as-data, edited via SQL and canonicalized back to git-diffable files.
+*2026-09-21*
 
-**Considered:** Doltgres, Dolt, gitsheets, GlueSQL, SQLite + sqlite-diffable.
+**Done:** Web-researched sourced principles (DRY, KISS, parse-dont-validate, hexagonal architecture, etc.) and committed the first 15 principles, 8 architectures and 6 practices as a private GitHub repo (grenudi/design-canon).
 
-**Rejected:** Doltgres/Dolt hide data history behind a non-file-visible git ref, unreadable in a PR. gitsheets has no SQL or joins. GlueSQL reinvents a SQL engine with no ALTER TABLE support, more machinery than the job needed.
+<a id="storage-format-spike"></a>
+### Spiked DuckDB + JSONL as the storage format on real content
 
+*2026-09-21*
 
-<a id="extract-template-from-working-repo"></a>
-### Extracted a template from a working repo, not designed one first
+**Done:** Tested the format against this repo's real data specifically (not a toy example): schema changes, ALTER TABLE limits, a real semicolon-in-SQL bug, BLOB corruption, and 300k-row determinism on a real multi-core CI runner.
 
-**Entry date:** 2026-09-21
+**Considered:** Doltgres, Dolt, gitsheets, GlueSQL.
 
-**Done:** Built the real content repo (software-engineering-canon, from design-canon) first, then extracted the proven tooling into this template once it had actually been used.
+**Rejected:** See tad-engine's and text-as-data-template's own session logs for the full comparison - this repo was the proving ground.
 
-**Considered:** Designing the template repo first, in the abstract.
+<a id="extract-shared-engine"></a>
+### Extracted the proven tooling into text-as-data-template, then adopted it back
 
-**Rejected:** An abstraction is only right once it has met a real case - designing the template first risked encoding assumptions that would not survive contact with real content.
+*2026-09-21*
 
+**Done:** Moved dc.py, render.py and the invariant checks into a new template repo once they had been battle-tested here, then adopted that template's engine back into this repo via .tad/, keeping this repo's own render.py local since its output (grouped principles, "Watch out:", "Also known as:") is genuinely specific to this content.
 
-<a id="switch-subtree-to-subrepo"></a>
-### Switched .tad/ from git subtree to git subrepo
+<a id="migrate-subtree-to-subrepo"></a>
+### Migrated the vendored engine from git subtree to git subrepo
 
-**Entry date:** 2026-09-22
+*2026-09-22*
 
-**Done:** Vendored .tad/ as a git subrepo instead of a git subtree, after testing both against the same real engine update.
+**Done:** Followed the same migration as text-as-data-template once subrepo was tested and adopted there.
 
-**Considered:** Continuing with git subtree (the original choice).
+<a id="rebuild-from-template"></a>
+### Rebuilt this repo from a fresh generation of text-as-data-template
 
-**Rejected:** subrepo writes one commit per sync instead of subtree's two, and tracks the pinned commit explicitly in .gitrepo instead of a squash-commit trailer subtree buries in commit history.
+*2026-09-22*
 
+**Done:** Renamed the original repo to software-engineering-canon-legacy, generated a new software-engineering-canon from the template via GitHub's actual template-generation API (not simulated), bootstrapped .tad/ with bin/adopt-engine.sh, and carried the real content and this custom render.py across - a battle test of the whole template pipeline end to end, at the request of the person running this project.
 
-<a id="decline-to-fork-git-subrepo"></a>
-### Declined to fork git-subrepo for custom commit messages
+**Considered:** Keep using the original repo as-is.
 
-**Entry date:** 2026-09-22
-
-**Done:** Verified directly that git subrepo clone/pull/push already accept -m/--message and it fully replaces the tool's auto-generated message, with .gitrepo (not the commit message) tracking state.
-
-**Considered:** Forking ingydotnet/git-subrepo and patching it to prompt for a commit message.
-
-**Rejected:** Unnecessary: the flag already existed. Forking would mean taking on indefinite maintenance of a bash-script fork for a feature that shipped already.
-
-
-<a id="tag-dist-for-pinning"></a>
-### Tagged the dist branch itself to enable version pinning
-
-**Entry date:** 2026-09-22
-
-**Done:** Added a release.yml step that tags dist as dist/vX.Y.Z right after release-please tags main, giving consumers a pinned, engine-only ref instead of the moving dist branch.
-
-**Considered:** Reusing release-please's own vX.Y.Z tag on main for pinning.
-
-**Rejected:** That tag's tree contains tad-engine's own governance files (commitlint config, CHANGELOG.md), exactly the clutter dist exists to avoid; a same-named tag on dist would also collide with it (git's tag namespace is repo-wide) - found by actually running a release, not by review, and fixed by namespacing as dist/vX.Y.Z.
-
-
-<a id="backlog-as-a-table"></a>
-### Adopted a backlog table as a standing convention
-
-**Entry date:** 2026-09-22
-
-**Done:** Every project built this way keeps a backlog table (status: open/in-progress/done), rendered to its own page the same as any other content.
-
-**Considered:** A separate issue tracker, or a free-form Markdown TODO file.
-
-**Rejected:** Either breaks the property the rest of the system relies on: everything queryable, versioned, and diffable in the same place, not split across tools.
+**Rejected:** The point was specifically to prove a fresh repo generated from the template works for real, not simulated - this repo became that test.

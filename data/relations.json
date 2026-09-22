@@ -1,2 +1,14 @@
-{"from_id":"example-two","to_id":"example-one","relation":"pairs-with","note":"shown as a relation on both pages"}
-{"from_id":"example-add-diagram","to_id":"example-one","relation":"concerns","note":"shows a backlog item linked to the concept it is about"}
+{"from_id":"parse-dont-validate","to_id":"illegal-states-unrepresentable","relation":"serves","note":"The boundary-facing, dynamic side of the same idea."}
+{"from_id":"newtypes","to_id":"illegal-states-unrepresentable","relation":"serves","note":null}
+{"from_id":"typestate","to_id":"illegal-states-unrepresentable","relation":"serves","note":null}
+{"from_id":"solid","to_id":"hexagonal","relation":"serves","note":"Dependency inversion is the mechanism."}
+{"from_id":"solid","to_id":"clean-onion","relation":"serves","note":"Dependency inversion is the mechanism."}
+{"from_id":"clean-onion","to_id":"hexagonal","relation":"same-family-as","note":null}
+{"from_id":"functional-core-imperative-shell","to_id":"hexagonal","relation":"pairs-with","note":null}
+{"from_id":"ddd","to_id":"hexagonal","relation":"supplies","note":"The domain model lives inside the hexagon."}
+{"from_id":"modular-monolith","to_id":"hexagonal","relation":"pairs-with","note":"Macro structure (modules) and micro structure (inside a module) are independent axes."}
+{"from_id":"vertical-slice","to_id":"modular-monolith","relation":"pairs-with","note":"Slices organise the inside of a module."}
+{"from_id":"evolutionary-architecture","to_id":"hexagonal","relation":"enforces","note":null}
+{"from_id":"evolutionary-architecture","to_id":"modular-monolith","relation":"enforces","note":null}
+{"from_id":"enforce-boundaries","to_id":"evolutionary-architecture","relation":"serves","note":null}
+{"from_id":"test-at-the-seams","to_id":"hexagonal","relation":"pairs-with","note":"In-memory adapters make core tests fast."}
