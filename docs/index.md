@@ -7,7 +7,7 @@ Guiding idea: make the right thing easy and the wrong thing unrepresentable, and
 
 - [Principles](principles.md): 15
 - [Architectures](architectures.md): 8
-- [Practices](practices.md): 6
-- [Sources](sources.md): 7
+- [Practices](practices.md): 11
+- [Sources](sources.md): 12
 - [Backlog](backlog.md): 3 open of 3
-- [Session Log](session_log.md): 6
+- [Session Log](session_log.md): 7

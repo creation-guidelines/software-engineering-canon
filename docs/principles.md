@@ -126,6 +126,9 @@ Origin
 Serves
 : [Make illegal states unrepresentable](principles.md#illegal-states-unrepresentable) (The boundary-facing, dynamic side of the same idea.)
 
+Served by
+: [Generators treat their input as untrusted](practices.md#untrusted-generator-input) (A generator parses its input into trusted values before it writes any code.)
+
 Sources
 : [Parse, don't validate](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/)
 

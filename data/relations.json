@@ -12,3 +12,8 @@
 {"from_id":"evolutionary-architecture","to_id":"modular-monolith","relation":"enforces","note":null}
 {"from_id":"enforce-boundaries","to_id":"evolutionary-architecture","relation":"serves","note":null}
 {"from_id":"test-at-the-seams","to_id":"hexagonal","relation":"pairs-with","note":"In-memory adapters make core tests fast."}
+{"from_id":"reproducible-builds","to_id":"verify-published-artifact","relation":"serves","note":"Reproducibility is what lets anyone rebuild a release and compare it with what was published."}
+{"from_id":"verify-published-artifact","to_id":"ci-gatekeeper","relation":"pairs-with","note":"CI proves what was built; this proves what was published."}
+{"from_id":"tested-documentation","to_id":"ci-gatekeeper","relation":"serves","note":"The gate covers documentation as well as code."}
+{"from_id":"untrusted-generator-input","to_id":"parse-dont-validate","relation":"serves","note":"A generator parses its input into trusted values before it writes any code."}
+{"from_id":"test-the-guard","to_id":"enforce-boundaries","relation":"serves","note":"A boundary check that has never failed has not been shown to enforce anything."}
