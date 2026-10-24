@@ -75,3 +75,18 @@ Considered
 
 Rejected
 : Checked rather than assumed: grepped for bold markers in this repo's render.py right after the pull and found 8 still there, confirming the two repos needed genuinely different amounts of work for the same visual change.
+
+<a id="add-shipping-and-documentation-practices"></a>
+### Added five practices learned from shipping two real projects
+
+Date
+: 2026-10-24
+
+Done
+: Added reproducible-builds, verify-published-artifact, tested-documentation, untrusted-generator-input and test-the-guard, each citing one page that was opened, plus five relations to existing concepts. Each came from a concrete failure while releasing snapall and argenv: a tag that rebuilt to different bytes than the published binary although the README said anyone could reproduce it; a checksum file that listed a file that was never published; four broken README links and a crates.io page that still showed version 0.1; generated shell completions whose input is a contract someone else may write; and a check that looked like it guarded something but passed because the mutation used to test it never applied.
+
+Considered
+: Recording the lessons as principles (for example "a claim is a test you have not written") instead of practices.
+
+Rejected
+: Principles: these are things a team does, not properties of a design, so they sit with the other practices. Also rejected: attributing the phrase "independently verifiable" to the reproducible-builds definition page, because the page that was opened does not contain it, so the entry cites only what that page says (any party can recreate bit-by-bit identical copies); and citing mailing-list threads about the definition, because the definition page itself was opened directly.

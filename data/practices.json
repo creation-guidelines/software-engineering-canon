@@ -4,3 +4,8 @@
 {"id":"twelve-factor","name":"Twelve-factor discipline","description":"Keep configuration, logging and process handling disciplined and environment-independent."}
 {"id":"observability","name":"Observability as a port","description":"Structured logs, traces and metrics are a first-class outbound port, not an afterthought."}
 {"id":"ci-gatekeeper","name":"CI as the gatekeeper","description":"Format, lint, type-check and test on every change."}
+{"id":"reproducible-builds","name":"Reproducible builds","description":"Pin the toolchain, remove build paths and timestamps from the output, and rebuild each release on another machine: a build that any party can repeat bit for bit is a build anyone can verify."}
+{"id":"verify-published-artifact","name":"Verify the published artifact","description":"After a release, download what was actually published and check its checksums, its signed provenance and a fresh install, instead of trusting that the pipeline shipped what it tested."}
+{"id":"tested-documentation","name":"Test the documentation","description":"Treat documentation like code: one source for each fact, relative links checked in CI, examples compiled or run, and a test behind every claim a README or release note makes."}
+{"id":"untrusted-generator-input","name":"Generators treat their input as untrusted","description":"A generator that emits code (shell completions, SQL, configuration) validates names, quotes free text for the target language, and tests the output in the real interpreter, because its input is data someone else wrote."}
+{"id":"test-the-guard","name":"Test the guard","description":"A check that has never failed proves nothing: break what it guards on purpose and watch the check fail before relying on it."}

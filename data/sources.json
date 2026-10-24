@@ -5,3 +5,8 @@
 {"id":"appscale-modules-slices","title":"Modules vs vertical slices: macro vs micro architecture","url":"https://appscale.blog/en/blog/modules-vs-vertical-slices-macro-vs-micro-architecture-modular-monolith-2026","author":"AppScale","year":2026}
 {"id":"llousas-fcis","title":"Building modern architectures: Functional Core, Imperative Shell","url":"https://medium.com/@allousas/building-modern-architectures-functional-core-imperative-shell-revamp-0bb5ae62b589","author":"Albert Llousas","year":2025}
 {"id":"neu-law-of-demeter","title":"Law of Demeter (General Formulation)","url":"https://www2.ccs.neu.edu/research/demeter/demeter-method/LawOfDemeter/general-formulation.html","author":"Northeastern University Demeter Project","year":null}
+{"id":"reproducible-builds-definition","title":"Definitions","url":"https://reproducible-builds.org/docs/definition/","author":"reproducible-builds.org","year":null}
+{"id":"slsa-provenance","title":"SLSA: Provenance","url":"https://slsa.dev/spec/v1.0/provenance","author":"SLSA","year":null}
+{"id":"write-the-docs-docs-as-code","title":"Docs as code","url":"https://www.writethedocs.org/guide/docs-as-code/","author":"Write the Docs","year":null}
+{"id":"owasp-injection-prevention","title":"Injection Prevention - OWASP Cheat Sheet Series","url":"https://cheatsheetseries.owasp.org/cheatsheets/Injection_Prevention_Cheat_Sheet.html","author":"OWASP","year":null}
+{"id":"wikipedia-mutation-testing","title":"Mutation testing","url":"https://en.wikipedia.org/wiki/Mutation_testing","author":"Wikipedia","year":null}

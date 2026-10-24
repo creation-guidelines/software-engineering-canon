@@ -7,3 +7,8 @@
 {"concept_id":"vertical-slice","source_id":"appscale-modules-slices"}
 {"concept_id":"functional-core-imperative-shell","source_id":"llousas-fcis"}
 {"concept_id":"demeter","source_id":"neu-law-of-demeter"}
+{"concept_id":"reproducible-builds","source_id":"reproducible-builds-definition"}
+{"concept_id":"verify-published-artifact","source_id":"slsa-provenance"}
+{"concept_id":"tested-documentation","source_id":"write-the-docs-docs-as-code"}
+{"concept_id":"untrusted-generator-input","source_id":"owasp-injection-prevention"}
+{"concept_id":"test-the-guard","source_id":"wikipedia-mutation-testing"}
