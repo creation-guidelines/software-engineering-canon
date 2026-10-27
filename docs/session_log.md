@@ -75,3 +75,18 @@ Considered
 
 Rejected
 : Checked rather than assumed: grepped for bold markers in this repo's render.py right after the pull and found 8 still there, confirming the two repos needed genuinely different amounts of work for the same visual change.
+
+<a id="small-languages-added"></a>
+### Added the every-module-is-a-small-language findings from snapall
+
+Date
+: 2026-10-27
+
+Done
+: Added stratified design and screaming architecture, five principles and six practices, with 10 sources that were opened and read, 21 relations and their citations. The findings come from building snapall (a Rust snapshot tool) to the rule that every layer is a small language and that the code, not prose, is the specification. During the work the author corrected the first wording: front file and file length were written as two rules with two bounds, when the principle is that every layer is the top of the layers beneath it, so one module speaks one language and length is only a smell. The entry was rewritten before it was committed.
+
+Considered
+: Adding all sixteen rules of the source text as separate concepts. Giving the numeric bounds the status of rules. Putting the comments position in as settled. Adding a new principles category, which the schema constraint would have needed a hand edit for.
+
+Rejected
+: Rules as a checklist: this canon holds concepts and the source text keeps the procedure. Fixed size limits as the definition of a good module: they are alarms and the source project keeps them as ratchets for that reason. The comments position as a law: Ousterhout disagrees in the transcript cited and both views are recorded in the caveat.
