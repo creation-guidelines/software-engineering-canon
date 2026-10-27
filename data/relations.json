@@ -12,3 +12,24 @@
 {"from_id":"evolutionary-architecture","to_id":"modular-monolith","relation":"enforces","note":null}
 {"from_id":"enforce-boundaries","to_id":"evolutionary-architecture","relation":"serves","note":null}
 {"from_id":"test-at-the-seams","to_id":"hexagonal","relation":"pairs-with","note":"In-memory adapters make core tests fast."}
+{"from_id":"names-are-the-persons-words","to_id":"ddd","relation":"serves","note":"The ubiquitous language, applied to every name in the code."}
+{"from_id":"derive-dont-verify","to_id":"dry","relation":"serves","note":"DRY gives knowledge one home. This says what to do when a second copy is needed: compute it."}
+{"from_id":"the-why-needs-a-carrier-that-cannot-drift","to_id":"dry","relation":"serves","note":"A reason is knowledge too: give it a home that is checked or generated."}
+{"from_id":"top-layers-decide-which-not-how","to_id":"separation-of-concerns","relation":"serves","note":"Which, when and where above. How below."}
+{"from_id":"top-layers-decide-which-not-how","to_id":"stratified-design","relation":"serves","note":null}
+{"from_id":"prose-names-code-claims","to_id":"enforce-boundaries","relation":"pairs-with","note":"A boundary asserted in prose is a wish. Assert it in a test."}
+{"from_id":"the-why-needs-a-carrier-that-cannot-drift","to_id":"adr","relation":"pairs-with","note":"An ADR records a decision at a date and does not claim to describe the present. Claims about the present belong to tests."}
+{"from_id":"ratchet","to_id":"evolutionary-architecture","relation":"serves","note":"A fitness function you can adopt over code that already breaks it."}
+{"from_id":"ratchet","to_id":"ci-gatekeeper","relation":"pairs-with","note":null}
+{"from_id":"generated-outline","to_id":"derive-dont-verify","relation":"serves","note":"The outline is computed, never written."}
+{"from_id":"generated-outline","to_id":"prose-names-code-claims","relation":"pairs-with","note":"The outline is only as true as the sentences it is built from, so they may only name."}
+{"from_id":"story-grammar","to_id":"stratified-design","relation":"serves","note":null}
+{"from_id":"story-grammar","to_id":"typestate","relation":"pairs-with","note":"The missing noun is often a type: an Approved that only the answer to a question can produce."}
+{"from_id":"cold-read","to_id":"stratified-design","relation":"enforces","note":"Tests whether the layers actually teach."}
+{"from_id":"evolutionary-architecture","to_id":"stratified-design","relation":"enforces","note":null}
+{"from_id":"executable-facts","to_id":"test-at-the-seams","relation":"serves","note":"The adapter's tests are the documentation of the foreign world."}
+{"from_id":"executable-facts","to_id":"hexagonal","relation":"pairs-with","note":null}
+{"from_id":"stratified-design","to_id":"hexagonal","relation":"pairs-with","note":"Hexagonal says where the boundary is. Stratified design says how every layer above it is written."}
+{"from_id":"screaming-architecture","to_id":"vertical-slice","relation":"same-family-as","note":"Both organise by purpose rather than by technical layer."}
+{"from_id":"every-layer-is-a-top","to_id":"stratified-design","relation":"serves","note":null}
+{"from_id":"every-layer-is-a-top","to_id":"screaming-architecture","relation":"pairs-with","note":"Module and directory names that read as the program's purposes."}
