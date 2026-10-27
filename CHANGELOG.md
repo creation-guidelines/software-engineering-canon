@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/creation-guidelines/software-engineering-canon/compare/v1.2.0...v1.2.1) (2026-10-27)
+
+
+### Bug Fixes
+
+* **data:** lead stratified design with its two faces and record the reframe ([fd194f0](https://github.com/creation-guidelines/software-engineering-canon/commit/fd194f0f7874aab3d27bb073fb011d026e49e4ea))
+
 ## [1.2.0](https://github.com/creation-guidelines/software-engineering-canon/compare/v1.1.0...v1.2.0) (2026-10-27)
 
 
