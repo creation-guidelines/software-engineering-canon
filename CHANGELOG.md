@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.0](https://github.com/creation-guidelines/software-engineering-canon/compare/v1.1.0...v1.2.0) (2026-10-27)
+
+
+### Features
+
+* **data:** add stratified design and the practices that keep it honest ([dd8d0c7](https://github.com/creation-guidelines/software-engineering-canon/commit/dd8d0c7164a5d178446d5ea8fe984a4f0056dbc4))
+* **data:** record the open questions and the decision behind the additions ([a34d679](https://github.com/creation-guidelines/software-engineering-canon/commit/a34d6791f8487f8fd14acd1a1806c42948d68f94))
+
 ## [1.1.0](https://github.com/creation-guidelines/software-engineering-canon/compare/v1.0.0...v1.1.0) (2026-09-22)
 
 
