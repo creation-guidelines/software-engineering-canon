@@ -83,7 +83,7 @@ Sources
 <a id="story-grammar"></a>
 ### Write stories in a grammar
 
-A function at a high layer reads as a sequence of verbs on nouns: ask, do, record, say. Hide lifetimes, format strings, Option and Result plumbing, bare booleans and None arguments behind verbs named for what they mean, and cap how often a story branches and how many closures it spells out. Whatever language-level syntax remains marks a concept the layer has not named yet (a Stop, an Approved, a Said): name it.
+A function at a high layer reads as a sequence of verbs on nouns: ask, do, record, say. Hide lifetimes, format strings, Option and Result plumbing, bare booleans and None arguments behind verbs named for what they mean, and cap how often a story branches and how many closures it spells out. Whatever language-level syntax remains marks a concept the layer has not named yet (a Stop, an Approved, a Said): name it. In practice, reading one handler for what it still spelled out found a missing noun, a story ended early by an answer that is not a yes. Naming it (a Stopped) replaced the same three lines in eight stories and let the program end with the right exit code.
 
 Serves
 : [Stratified design: every layer a small language](architectures.md#stratified-design)

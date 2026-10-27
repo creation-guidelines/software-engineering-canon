@@ -90,3 +90,18 @@ Considered
 
 Rejected
 : Rules as a checklist: this canon holds concepts and the source text keeps the procedure. Fixed size limits as the definition of a good module: they are alarms and the source project keeps them as ratchets for that reason. The comments position as a law: Ousterhout disagrees in the transcript cited and both views are recorded in the caveat.
+
+<a id="small-languages-as-an-idea"></a>
+### Restated the small-languages findings as one idea and not a list of rules
+
+Date
+: 2026-10-27
+
+Done
+: The author preferred the principle to a numbered rule list. The source text in snapall was rewritten as prose around the two faces of a layer, and this canon now leads stratified design with them: each layer has an upward face (what it is for and the words it offers) and a downward face (a body in the words of the layers beneath), and a layer below is the top of those under it. The source project continued the refactor under it: a missing noun found by reading a story (Stopped), modules split by language (one per command, and a four-language adapter file into four), with its size checks relabelled as alarms.
+
+Considered
+: Keeping the sixteen rules as the shape of the canon text, as a checklist beside the concepts.
+
+Rejected
+: A rule list as the shape of the source text: the rules are consequences of one idea and its alarms, and a list invites meeting them without understanding. The numeric limits as definitions: they find candidates and a short file that mixes two levels is still wrong.
