@@ -28,3 +28,6 @@
 {"concept_id":"executable-facts","source_id":"snapall-small-languages"}
 {"concept_id":"every-layer-is-a-top","source_id":"martin-screaming-architecture"}
 {"concept_id":"every-layer-is-a-top","source_id":"snapall-small-languages"}
+{"concept_id":"capture-refactor-compare","source_id":"fowler-definition-of-refactoring"}
+{"concept_id":"capture-refactor-compare","source_id":"getyourguide-legacy-code"}
+{"concept_id":"capture-refactor-compare","source_id":"snapall-pr-areas"}

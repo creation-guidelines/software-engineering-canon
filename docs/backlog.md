@@ -19,7 +19,7 @@ No license chosen yet for this repo or the org overall.
 <a id="grow-the-canon"></a>
 ### Grow the canon past its initial seed
 
-20 principles, 10 architectures and 12 practices after the small-languages additions. Still a seed and not a comprehensive canon, which was the original goal.
+20 principles, 10 architectures and 13 practices after the small-languages additions. Still a seed and not a comprehensive canon, which was the original goal.
 
 <a id="small-languages-automate-cold-read"></a>
 ### Automate the cold read

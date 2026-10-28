@@ -29,7 +29,7 @@ Pairs with
 Fast core tests with in-memory adapters, contract tests per port, and few end-to-end tests.
 
 Pairs with
-: [Hexagonal architecture (ports and adapters)](architectures.md#hexagonal) (In-memory adapters make core tests fast.)
+: [Hexagonal architecture (ports and adapters)](architectures.md#hexagonal) (In-memory adapters make core tests fast.), [Capture the output, refactor, compare](practices.md#capture-refactor-compare) (The same idea from the outside: the program's whole observable surface is the seam.)
 
 Served by
 : [Facts about the foreign world as tests](practices.md#executable-facts) (The adapter's tests are the documentation of the foreign world.)
@@ -61,7 +61,7 @@ Serves
 : [Evolutionary architecture with fitness functions](architectures.md#evolutionary-architecture) (A fitness function you can adopt over code that already breaks it.)
 
 Pairs with
-: [CI as the gatekeeper](practices.md#ci-gatekeeper)
+: [CI as the gatekeeper](practices.md#ci-gatekeeper), [Capture the output, refactor, compare](practices.md#capture-refactor-compare) (A ratchet keeps a rule from getting worse. This keeps a change from altering behaviour.)
 
 Sources
 : [Ratchets in software development](https://qntm.org/ratchet), [How we evolve code: Notion's ratcheting system using custom ESLint rules](https://www.notion.com/blog/how-we-evolved-our-code-notions-ratcheting-system-using-custom-eslint-rules), [ADR 20: Every module is a small language, and the outline is generated (measured baseline and ratchets)](https://github.com/grenudi/snapall/blob/main/docs/adr/0020-every-module-is-a-small-language.md)
@@ -83,7 +83,7 @@ Sources
 <a id="story-grammar"></a>
 ### Write stories in a grammar
 
-A function at a high layer reads as a sequence of verbs on nouns: ask, do, record, say. Hide lifetimes, format strings, Option and Result plumbing, bare booleans and None arguments behind verbs named for what they mean, and cap how often a story branches and how many closures it spells out. Whatever language-level syntax remains marks a concept the layer has not named yet (a Stop, an Approved, a Said): name it. In practice, reading one handler for what it still spelled out found a missing noun, a story ended early by an answer that is not a yes. Naming it (a Stopped) replaced the same three lines in eight stories and let the program end with the right exit code.
+A function at a high layer reads as a sequence of verbs on nouns: ask, do, record, say. Hide lifetimes, format strings, Option and Result plumbing, bare booleans and None arguments behind verbs named for what they mean, and cap how often a story branches and how many closures it spells out. Whatever language-level syntax remains marks a concept the layer has not named yet (a Stop, an Approved, a Said): name it. In practice, reading one handler for what it still spelled out found a missing noun, a story ended early by an answer that is not a yes. Naming it (a Stopped) replaced the same three lines in eight stories and let the program end with the right exit code. The next noun found this way was an Approved: a value that only asking can produce, taken by the function that begins a change, so that a change cannot be made unasked.
 
 Serves
 : [Stratified design: every layer a small language](architectures.md#stratified-design)
@@ -132,3 +132,14 @@ Pairs with
 
 Sources
 : [Screaming Architecture](https://blog.cleancoder.com/uncle-bob/2011/09/30/Screaming-Architecture.html), [Every module is a small language (the rule, its procedure and its worked example)](https://github.com/grenudi/snapall/blob/main/docs/canon/small-languages.md)
+
+<a id="capture-refactor-compare"></a>
+### Capture the output, refactor, compare
+
+Before a wide change that is meant to preserve behaviour, capture what the program actually does for a set of commands that covers everything a user or a script can see: text, machine-readable output, error messages and exit codes, with what varies from run to run (times, ids) made stable. After the change capture again and compare byte for byte. This characterizes what the program does and not what it should do, so it needs no judgement of correctness, and it covers what unit tests of the code cannot: the whole observable surface. Pair it with a change that cannot alter output by construction, such as renaming code identifiers and never string literals, and use the comparison to check that it held.
+
+Pairs with
+: [Test at the seams](practices.md#test-at-the-seams) (The same idea from the outside: the program's whole observable surface is the seam.), [Ratchets for debt you cannot pay yet](practices.md#ratchet) (A ratchet keeps a rule from getting worse. This keeps a change from altering behaviour.)
+
+Sources
+: [Definition Of Refactoring](https://martinfowler.com/bliki/DefinitionOfRefactoring.html), [How We Work Efficiently with Legacy Code (characterization tests)](https://careers.getyourguide.com/posts/how-we-work-efficiently-with-legacy-code), [snapall pull request 74: the core speaks of areas and locations (output of 24 commands compared byte for byte)](https://github.com/grenudi/snapall/pull/74)
