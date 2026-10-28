@@ -139,7 +139,7 @@ Sources
 A module's description says what it is about, as a noun phrase. A guarantee (only, never, always) belongs in a test or a type, where it can fail. In prose it can be false while the build stays green.
 
 Watch out
-: Found in practice: a module described as the one place output leaves the program while seven others printed by themselves, which a ratchet exposed. The rule is about guarantees, not about all prose: descriptions of subject stay useful and cheap.
+: Found in practice: a module described as the one place output leaves the program while seven others printed by themselves, which a ratchet exposed. The rule is about guarantees, not about all prose: descriptions of subject stay useful and cheap. The same drift was found a second time when the worked example in the source text went stale the moment a type was renamed. A test now requires the example to equal the source it shows, and fails when it does not.
 
 Pairs with
 : [Enforce boundaries with tooling](practices.md#enforce-boundaries) (A boundary asserted in prose is a wish. Assert it in a test.), [Generate the outline from the code](practices.md#generated-outline) (The outline is only as true as the sentences it is built from, so they may only name.)

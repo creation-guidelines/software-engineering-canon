@@ -105,3 +105,18 @@ Considered
 
 Rejected
 : A rule list as the shape of the source text: the rules are consequences of one idea and its alarms, and a list invites meeting them without understanding. The numeric limits as definitions: they find candidates and a short file that mixes two levels is still wrong.
+
+<a id="small-languages-evidence-from-a-wide-rename"></a>
+### Recorded what a wide rename and the next noun taught
+
+Date
+: 2026-10-28
+
+Done
+: Added the practice of capturing a program's output before a behaviour-preserving change and comparing it after, with Fowler's definition of refactoring and an engineering account of characterization tests as sources, and the source project's pull request as the worked case: 81 names and about 2,000 occurrences renamed so that the core says area and location where it said config and subvolume, with 24 commands compared byte for byte. Recorded Approved as the noun found after Stopped, and a second case of prose drifting from code (the worked example in the source text, now tested to equal the source it shows).
+
+Considered
+: Recording the rename as a refactoring catalogue entry: it is a technique for proving that a change preserved behaviour, not a move in itself.
+
+Rejected
+: Trusting the compiler and the unit tests alone for a rename this wide: neither sees what a user or a script can observe, and a variable renamed into a scope that already has that name changes meaning without an error.

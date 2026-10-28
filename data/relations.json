@@ -33,3 +33,5 @@
 {"from_id":"screaming-architecture","to_id":"vertical-slice","relation":"same-family-as","note":"Both organise by purpose rather than by technical layer."}
 {"from_id":"every-layer-is-a-top","to_id":"stratified-design","relation":"serves","note":null}
 {"from_id":"every-layer-is-a-top","to_id":"screaming-architecture","relation":"pairs-with","note":"Module and directory names that read as the program's purposes."}
+{"from_id":"capture-refactor-compare","to_id":"test-at-the-seams","relation":"pairs-with","note":"The same idea from the outside: the program's whole observable surface is the seam."}
+{"from_id":"capture-refactor-compare","to_id":"ratchet","relation":"pairs-with","note":"A ratchet keeps a rule from getting worse. This keeps a change from altering behaviour."}
