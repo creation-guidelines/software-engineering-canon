@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/creation-guidelines/software-engineering-canon/compare/v1.2.1...v1.3.0) (2026-10-28)
+
+
+### Features
+
+* **data:** add capture-refactor-compare and record what a wide rename taught ([ca54594](https://github.com/creation-guidelines/software-engineering-canon/commit/ca545942afb8a97e6cdd6e3294f6329e28f09352))
+
 ## [1.2.1](https://github.com/creation-guidelines/software-engineering-canon/compare/v1.2.0...v1.2.1) (2026-10-27)
 
 
