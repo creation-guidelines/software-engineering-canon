@@ -1,0 +1,16 @@
+# This repository's mark: how it fits the Open Commons Observatory's picture.
+schema = 1
+
+[project]
+id = "creation-guidelines/software-engineering-canon"
+name = "The software engineering canon: principles, architectures, practices"
+title = "Canon"
+kind = "canon"
+parent = "open-commons-observatory"
+
+[exports]
+principles = "data/principles.json"
+practices = "data/practices.json"
+architectures = "data/architectures.json"
+backlog = "data/backlog.json"
+session_log = "data/session_log.json"
