@@ -120,3 +120,18 @@ Considered
 
 Rejected
 : Trusting the compiler and the unit tests alone for a rename this wide: neither sees what a user or a script can observe, and a variable renamed into a scope that already has that name changes meaning without an error.
+
+<a id="2026-11-11-tad-in-rust"></a>
+### tad in Rust replaces the vendored Python engine
+
+Date
+: 2026-11-11
+
+Done
+: The data moved to tad in Rust: tables.toml is the authority, tad comes from its pinned release, the vendored .tad, schema.sql, load.sql and checks/ are gone. This repository's own renderer stays, reading the JSON lines directly; the pages were required to stay byte-identical, and did.
+
+Considered
+: Rendering with tad's generic renderer now.
+
+Rejected
+: That: this content's presentation (Core and Type-driven groups, Watch out, Also known as, relations in words) is deliberate; it retires only when tad can take presentation declared as data.
