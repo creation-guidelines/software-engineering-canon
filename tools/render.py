@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""render.py - render data/ (DuckDB export) into Markdown pages under docs/.
+"""render.py - render data/ (JSON lines, one file per table) into Markdown pages under docs/.
 
 Output is deterministic (no timestamps) so CI can require `git status` to be clean after rendering.
 """
+import glob
 import os
 
 import duckdb
@@ -16,7 +17,10 @@ BACKWARD = {"serves": "Served by", "supplies": "Supplied by", "enforces": "Enfor
             "pairs-with": "Pairs with", "same-family-as": "Same family as"}
 
 con = duckdb.connect()
-con.execute(f"IMPORT DATABASE '{DATA}'")
+# tad keeps data/ as JSON lines, one file per table (tables.toml declares them); DuckDB reads them here.
+for path in sorted(glob.glob(f"{DATA}/*.json")):
+    table = os.path.basename(path)[: -len(".json")]
+    con.execute(f"CREATE TABLE {table} AS SELECT * FROM read_json('{path}', format='newline_delimited')")
 
 
 def rows(sql, *params):
