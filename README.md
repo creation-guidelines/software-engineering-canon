@@ -7,7 +7,7 @@ A curated canon of battle-tested software design principles, type-driven techniq
 - **Working on it (humans or agents):** read [`AGENTS.md`](AGENTS.md), run `make setup`, then `make verify`.
 
 ## How it works
-`data/` is the source of truth. tad (a released Rust tool) checks it against `tables.toml`, edits it one checked row at a time, and writes it back in a canonical form so a one-row change is a one-line diff. CI checks that the data is valid and canonical, that invariants in [`checks/`](checks/) hold, and that the rendered [`docs/`](docs/) are up to date.
+`data/` is the source of truth. tad (a released Rust tool) checks it against `tables.toml`, edits it one checked row at a time, and writes it back in a canonical form so a one-row change is a one-line diff. CI checks that the data is valid and canonical, that every rule in [`tables.toml`](tables.toml) holds, and that the rendered [`docs/`](docs/) are up to date.
 
 The reusable machinery (checking, canonical form, checked edits, rendering) is [tad](https://github.com/creation-guidelines/tad-engine), a released Rust tool. It began as this repository's own tooling, was extracted into a shared engine, and was rewritten in Rust in 2026.
 
