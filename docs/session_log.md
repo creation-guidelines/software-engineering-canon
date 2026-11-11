@@ -1,4 +1,4 @@
-<!-- Generated from data/ by tools/render.py. Do not edit by hand. -->
+<!-- Generated from data/ by tad. Do not edit by hand. -->
 
 # Session Log
 
@@ -135,3 +135,18 @@ Considered
 
 Rejected
 : That: this content's presentation (Core and Type-driven groups, Watch out, Also known as, relations in words) is deliberate; it retires only when tad can take presentation declared as data.
+
+<a id="2026-11-11-presentation-as-data"></a>
+### The pages read from data; the renderer and DuckDB retire
+
+Date
+: 2026-11-11
+
+Done
+: How the pages read is now declared in tables.toml ([site] and [pages.*]) and rendered by tad 0.3.0; tools/render.py and its DuckDB package are gone, and CI no longer installs Python. The pages are identical but for their notice line, which now names tad.
+
+Considered
+: Keeping this repository's own renderer.
+
+Rejected
+: That: a renderer per repository is code every repository must keep; presentation as data is read by people and rendered by one tool.

@@ -4,17 +4,16 @@ This repo is a small versioned "database" of software-engineering knowledge (pri
 
 ## Setup (once per session)
 ```
-make setup    # installs tad from its pinned release (its checksum checked), and the renderer's Python package
+make setup    # installs tad from its pinned release (its checksum checked)
 make verify   # exactly what CI runs
 ```
 
 ## Layout
 | Path | What | Who writes it |
 |---|---|---|
-| `tables.toml` | every table declared as data - fields, types, allowed values, patterns - and the rules across tables | you, by hand (see below) |
+| `tables.toml` | every table declared as data - fields, types, allowed values, patterns - the rules across tables, and how the pages read | you, by hand (see below) |
 | `data/<table>.json` | one JSON object per line (JSONL despite the extension) | `tad` only |
-| `docs/*.md` | rendered pages, published to GitHub Pages | `tools/render.py` only |
-| `tools/render.py` | renderer, specific to this repo's presentation (see below for why) | you |
+| `docs/*.md` | rendered pages, published to GitHub Pages | `make render` only |
 
 ## Rules
 1. **Never hand-edit `data/*.json` or `docs/*.md`.** Change a row with `tad set`: it checks the whole repository and keeps nothing that breaks a rule. Then `make render`.
@@ -44,11 +43,11 @@ comm -23 /tmp/concepts /tmp/cited
 ```
 A new field: declare it in `tables.toml` (a `[[tables.<table>.fields]]` entry with its `name` and `type`, and `required`, `enum` or `pattern` if it has them), then `make canon`: every line gains the field, empty. A required field is then given a value on every row with `tad set` before `make verify` passes.
 
-Rename a field: `mlr -I --ijsonl --ojsonl rename old,new data/<table>.json`, make the same change in `tables.toml` and in `tools/render.py` if it shows the field, then `make canon` (forgetting the declaration is caught by `make check`).
+Rename a field: `mlr -I --ijsonl --ojsonl rename old,new data/<table>.json`, make the same change in `tables.toml` (in the presentation too, if a page shows the field), then `make canon` (forgetting the declaration is caught by `make check`).
 
 ## Why it is built this way
 - The data is plain text in git: one JSON object per line, so a change to one row is a one-line diff, readable without any tool.
 - `tables.toml` declares the tables as data (after Frictionless Data's Table Schema): a person reads it, and tad checks every row and every rule across tables against it.
-- `tools/render.py` stays local because this content's presentation - grouping principles into "Core" and "Type-driven design", "Watch out:" for a caveat, "Also known as:" for aliases, a combined origin line, relations in words ("Serves", "Served by") - is specific to it. It reads `data/` with DuckDB; when tad can take presentation declared as data, this renderer retires and DuckDB with it.
-- tad replaced a vendored Python engine (DuckDB) on 2026-11-11, after giving the same verdicts and the same canonical bytes on this repository and three others; this repository's pages were required to stay byte-identical through the switch.
+- How the pages read is declared in `tables.toml` too (`[site]` and `[pages.<table>]`): principles grouped into "Core" and "Type-driven design", "Watch out" for a caveat, "Also known as" for aliases, an origin line, relations in words ("Serves", "Served by"), sources as a list. Presentation is data like the rest; this repository needs no renderer of its own.
+- tad replaced a vendored Python engine (DuckDB) on 2026-11-11, after giving the same verdicts and the same canonical bytes on this repository and three others; this repository's pages were required to stay byte-identical through the switch, and again when its own renderer retired for declared presentation (only the notice line changed).
 - Findings and measurements behind the original rules are in the design spike: https://github.com/grenudi/design-canon/pull/1
