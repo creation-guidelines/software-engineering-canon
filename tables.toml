@@ -257,3 +257,74 @@ from = "from_id"
 to = "to_id"
 kind = "relation"
 kinds = ["pairs-with", "same-family-as"]
+
+# How the pages read (presentation, declared as data; rendered by tad)
+[site]
+title = "Software engineering canon"
+intro = [
+    "A curated canon of battle-tested software design principles, type-driven techniques and architectures.",
+    "Guiding idea: make the right thing easy and the wrong thing unrepresentable, and prefer structure the compiler and the module boundaries enforce over conventions people must remember.",
+]
+index = [
+    { page = "principles" },
+    { page = "architectures" },
+    { page = "practices" },
+    { page = "sources" },
+    { page = "backlog", count = { field = "status", open_unless = ["done"] } },
+    { page = "session_log" },
+]
+
+[site.relation_words]
+serves = ["Serves", "Served by"]
+supplies = ["Supplies", "Supplied by"]
+enforces = ["Enforces", "Enforced by"]
+pairs-with = ["Pairs with", "Pairs with"]
+same-family-as = ["Same family as", "Same family as"]
+
+[pages.principles]
+intro = "Small, sharp rules that hold up across languages and eras, followed by the type-driven techniques that let the compiler enforce them."
+group_by = "category"
+groups = [{ value = "core", heading = "Core principles" }, { value = "type-driven", heading = "Type-driven design" }]
+show = [
+    { field = "statement" },
+    { field = "aliases", label = "Also known as" },
+    { field = "caveat", label = "Watch out" },
+    { fields = ["origin_author", "origin_year"], label = "Origin" },
+    { relations = true },
+    { sources = true },
+]
+
+[pages.architectures]
+intro = "Two independent axes: the macro structure of the system (modules and their boundaries) and the micro structure inside a module. Comparing them as rivals is a category error."
+show = [
+    { field = "essence" },
+    { field = "best_when", label = "Best when" },
+    { fields = ["origin_author", "origin_year"], label = "Origin" },
+    { relations = true },
+    { sources = true },
+]
+
+[pages.practices]
+intro = "Habits and tooling that make the principles and architectures stick."
+show = [{ field = "description" }, { relations = true }, { sources = true }]
+
+[pages.sources]
+list = { link = ["title", "url"], after = ["author", "year"], cited_by = true }
+
+[pages.backlog]
+intro = "Known gaps in this canon, tracked the same way as its content."
+group_by = "status"
+groups = [{ value = "open", heading = "Open" }, { value = "in-progress", heading = "In progress" }, { value = "done", heading = "Done" }]
+skip_empty_groups = true
+order_by = ["opened"]
+show = [{ field = "note" }]
+
+[pages.session_log]
+intro = "One entry per significant decision: what was done, what was considered, what was rejected and why."
+order_by = ["entry_date"]
+show = [
+    { field = "entry_date", label = "Date" },
+    { field = "done", label = "Done" },
+    { field = "considered", label = "Considered" },
+    { field = "rejected", label = "Rejected" },
+]

@@ -1,4 +1,4 @@
-<!-- Generated from data/ by tools/render.py. Do not edit by hand. -->
+<!-- Generated from data/ by tad. Do not edit by hand. -->
 
 # Software engineering canon
 
@@ -10,4 +10,4 @@ Guiding idea: make the right thing easy and the wrong thing unrepresentable, and
 - [Practices](practices.md): 13
 - [Sources](sources.md): 20
 - [Backlog](backlog.md): 9 open of 9
-- [Session Log](session_log.md): 10
+- [Session Log](session_log.md): 11
