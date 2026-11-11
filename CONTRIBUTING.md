@@ -29,7 +29,7 @@ fix(data): correct the year on an existing entry
 feat(schema): add an aliases column to concepts
 fix(schema): require an author whenever a year is given
 fix(tools): dc.py split SQL on ';' inside string literals
-chore(deps): bump duckdb
+build: tad 0.3.0
 ```
 
 ## Workflow
