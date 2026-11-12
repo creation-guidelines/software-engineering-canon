@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/creation-guidelines/software-engineering-canon/compare/v1.3.0...v1.4.0) (2026-11-12)
+
+
+### Features
+
+* SQL is back: make sql, tad engine in setup, the recipe ([#26](https://github.com/creation-guidelines/software-engineering-canon/issues/26)) ([b5520b2](https://github.com/creation-guidelines/software-engineering-canon/commit/b5520b2313df970a83e7ceb1bcfd7dd2f6aa3c41))
+
 ## [1.3.0](https://github.com/creation-guidelines/software-engineering-canon/compare/v1.2.1...v1.3.0) (2026-10-28)
 
 
