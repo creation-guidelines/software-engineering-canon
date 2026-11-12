@@ -1,3 +1,4 @@
 {"id":"g-20261111-213225","at":"2026-11-11T21:32:25Z","by":"lab-agent-session","kind":"chore","summary":"glimpses are recorded here from now on"}
 {"id":"g-20261111-221658","at":"2026-11-11T22:16:58Z","by":"tad update-pins","kind":"build","summary":"tad 0.4.0: the pin moved, the data and documents re-rendered"}
 {"id":"g-20261112-010540","at":"2026-11-12T01:05:40Z","by":"lab-agent-session","kind":"build","summary":"tad 0.5.0: the pin moved, the data and documents re-rendered"}
+{"id":"g-20261112-010809","at":"2026-11-12T01:08:09Z","by":"lab-agent-session","kind":"feat","summary":"SQL is back: make sql, tad engine in setup, the recipe"}
