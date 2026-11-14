@@ -328,3 +328,15 @@ show = [
     { field = "considered", label = "Considered" },
     { field = "rejected", label = "Rejected" },
 ]
+
+[[tables.principles.fields]]
+name = "shown_in"
+type = "string"
+
+[[tables.architectures.fields]]
+name = "shown_in"
+type = "string"
+
+[[tables.practices.fields]]
+name = "shown_in"
+type = "string"
