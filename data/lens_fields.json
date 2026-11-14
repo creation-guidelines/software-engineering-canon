@@ -1,0 +1,4 @@
+{"id":"canon/architectures/id","lens":"canon","of_table":"architectures","name":"id","kind":"string","needed":true,"ordinal":1}
+{"id":"canon/architectures/shown_in","lens":"canon","of_table":"architectures","name":"shown_in","kind":"string","needed":false,"ordinal":2}
+{"id":"canon/principles/id","lens":"canon","of_table":"principles","name":"id","kind":"string","needed":true,"ordinal":1}
+{"id":"canon/principles/shown_in","lens":"canon","of_table":"principles","name":"shown_in","kind":"string","needed":false,"ordinal":2}
