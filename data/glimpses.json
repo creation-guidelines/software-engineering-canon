@@ -7,3 +7,4 @@
 {"id":"g-20261115-190719","at":"2026-11-15T19:07:19Z","by":"claude","kind":"docs","summary":"where three practices of the canon are shown: the way up is a surface","touches":"practices:every-layer-is-a-top practices:generated-outline practices:cold-read","where":"open-commons-observatory/ocoeco/decisions:2026-11-15-the-way-up-is-a-surface"}
 {"id":"g-20261116-144410","at":"2026-11-16T14:44:10Z","by":"claude","kind":"chore","summary":"a mark: the latest runs are observed, as runs - no longer gathered here"}
 {"id":"g-20261116-155404","at":"2026-11-16T15:54:04Z","by":"claude","kind":"chore","summary":"a mark: what the gatherer writes is said where it writes it - no longer named here"}
+{"id":"g-20261117-050140","at":"2026-11-17T05:01:40Z","by":"conveyor","kind":"docs","summary":"A practice: declare the invocation surface once (argenv)","touches":"practices:declared-invocation-surface"}
