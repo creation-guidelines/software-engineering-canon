@@ -143,3 +143,8 @@ Pairs with
 
 Sources
 : [Definition Of Refactoring](https://martinfowler.com/bliki/DefinitionOfRefactoring.html), [How We Work Efficiently with Legacy Code (characterization tests)](https://careers.getyourguide.com/posts/how-we-work-efficiently-with-legacy-code), [snapall pull request 74: the core speaks of areas and locations (output of 24 commands compared byte for byte)](https://github.com/grenudi/snapall/pull/74)
+
+<a id="declared-invocation-surface"></a>
+### Declare the invocation surface
+
+Declare a program's arguments and the environment variables it reads once, as a typed, machine-readable contract (argenv); the parser, the accessors, completions for every shell, the man page and lint all come from that one declaration, so the surface cannot drift from the code and a wrong invocation is reported instead of silently ignored.
