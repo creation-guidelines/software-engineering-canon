@@ -4,7 +4,7 @@
 
 One entry per significant decision: what was done, what was considered, what was rejected and why.
 
-<a id="research-then-seed-canon"></a>
+<a id="2026-09-21-research-then-seed-canon"></a>
 ### Researched engineering principles and seeded the canon
 
 Date
@@ -13,7 +13,7 @@ Date
 Done
 : Web-researched sourced principles (DRY, KISS, parse-dont-validate, hexagonal architecture, etc.) and committed the first 15 principles, 8 architectures and 6 practices as a private GitHub repo (grenudi/design-canon).
 
-<a id="storage-format-spike"></a>
+<a id="2026-09-21-storage-format-spike"></a>
 ### Spiked DuckDB + JSONL as the storage format on real content
 
 Date
@@ -28,7 +28,7 @@ Considered
 Rejected
 : See tad-engine's and text-as-data-template's own session logs for the full comparison - this repo was the proving ground.
 
-<a id="extract-shared-engine"></a>
+<a id="2026-09-21-extract-shared-engine"></a>
 ### Extracted the proven tooling into text-as-data-template, then adopted it back
 
 Date
@@ -37,7 +37,7 @@ Date
 Done
 : Moved dc.py, render.py and the invariant checks into a new template repo once they had been battle-tested here, then adopted that template's engine back into this repo via .tad/, keeping this repo's own render.py local since its output (grouped principles, "Watch out:", "Also known as:") is genuinely specific to this content.
 
-<a id="migrate-subtree-to-subrepo"></a>
+<a id="2026-09-22-migrate-subtree-to-subrepo"></a>
 ### Migrated the vendored engine from git subtree to git subrepo
 
 Date
@@ -46,7 +46,7 @@ Date
 Done
 : Followed the same migration as text-as-data-template once subrepo was tested and adopted there.
 
-<a id="rebuild-from-template"></a>
+<a id="2026-09-22-rebuild-from-template"></a>
 ### Rebuilt this repo from a fresh generation of text-as-data-template
 
 Date
@@ -61,7 +61,7 @@ Considered
 Rejected
 : The point was specifically to prove a fresh repo generated from the template works for real, not simulated - this repo became that test.
 
-<a id="adopt-rfc-style"></a>
+<a id="2026-09-22-adopt-rfc-style"></a>
 ### Adopted the RFC-like minimal style, engine part pulled and local part hand-ported
 
 Date
@@ -76,7 +76,7 @@ Considered
 Rejected
 : Checked rather than assumed: grepped for bold markers in this repo's render.py right after the pull and found 8 still there, confirming the two repos needed genuinely different amounts of work for the same visual change.
 
-<a id="small-languages-added"></a>
+<a id="2026-10-27-small-languages-added"></a>
 ### Added the every-module-is-a-small-language findings from snapall
 
 Date
@@ -91,7 +91,7 @@ Considered
 Rejected
 : Rules as a checklist: this canon holds concepts and the source text keeps the procedure. Fixed size limits as the definition of a good module: they are alarms and the source project keeps them as ratchets for that reason. The comments position as a law: Ousterhout disagrees in the transcript cited and both views are recorded in the caveat.
 
-<a id="small-languages-as-an-idea"></a>
+<a id="2026-10-27-small-languages-as-an-idea"></a>
 ### Restated the small-languages findings as one idea and not a list of rules
 
 Date
@@ -106,7 +106,7 @@ Considered
 Rejected
 : A rule list as the shape of the source text: the rules are consequences of one idea and its alarms, and a list invites meeting them without understanding. The numeric limits as definitions: they find candidates and a short file that mixes two levels is still wrong.
 
-<a id="small-languages-evidence-from-a-wide-rename"></a>
+<a id="2026-10-28-small-languages-evidence-from-a-wide-rename"></a>
 ### Recorded what a wide rename and the next noun taught
 
 Date
@@ -121,7 +121,7 @@ Considered
 Rejected
 : Trusting the compiler and the unit tests alone for a rename this wide: neither sees what a user or a script can observe, and a variable renamed into a scope that already has that name changes meaning without an error.
 
-<a id="2026-11-11-tad-in-rust"></a>
+<a id="2026-11-11-2026-11-11-tad-in-rust"></a>
 ### tad in Rust replaces the vendored Python engine
 
 Date
@@ -136,7 +136,7 @@ Considered
 Rejected
 : That: this content's presentation (Core and Type-driven groups, Watch out, Also known as, relations in words) is deliberate; it retires only when tad can take presentation declared as data.
 
-<a id="2026-11-11-presentation-as-data"></a>
+<a id="2026-11-11-2026-11-11-presentation-as-data"></a>
 ### The pages read from data; the renderer and DuckDB retire
 
 Date
@@ -151,7 +151,7 @@ Considered
 Rejected
 : That: a renderer per repository is code every repository must keep; presentation as data is read by people and rendered by one tool.
 
-<a id="2026-11-18-converge-and-ask-only-on-change"></a>
+<a id="2026-11-18-2026-11-18-converge-and-ask-only-on-change"></a>
 ### A principle: converge, and ask only on a change
 
 Date
@@ -166,7 +166,7 @@ Considered
 Rejected
 : A practice instead of a principle (it constrains design, not a procedure); naming it idempotency alone (idempotency says nothing of when to ask a person).
 
-<a id="2026-11-18-no-glimpse-export"></a>
+<a id="2026-11-18-2026-11-18-no-glimpse-export"></a>
 ### The canon no longer exports glimpses
 
 Date

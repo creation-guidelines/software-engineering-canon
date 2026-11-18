@@ -7,6 +7,7 @@ TAD ?= tad
 setup:            ## install tad from its pinned release (its checksum checked)
 	./bin/install-tad.sh
 	$(TAD) engine
+	sh bin/install-ikb.sh
 check:            ## every row and every rule across tables (tables.toml)
 	$(TAD) check
 canon:            ## rewrite data/ in canonical form (only when it checks out)
