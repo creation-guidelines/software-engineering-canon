@@ -5,9 +5,9 @@
 A curated canon of battle-tested software design principles, type-driven techniques and architectures.
 Guiding idea: make the right thing easy and the wrong thing unrepresentable, and prefer structure the compiler and the module boundaries enforce over conventions people must remember.
 
-- [Principles](principles.md): 20
+- [Principles](principles.md): 21
 - [Architectures](architectures.md): 10
 - [Practices](practices.md): 14
-- [Sources](sources.md): 20
+- [Sources](sources.md): 23
 - [Backlog](backlog.md): 9 open of 9
-- [Session Log](session_log.md): 11
+- [Session Log](session_log.md): 13

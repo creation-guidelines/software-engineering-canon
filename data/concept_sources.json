@@ -31,3 +31,6 @@
 {"concept_id":"capture-refactor-compare","source_id":"fowler-definition-of-refactoring"}
 {"concept_id":"capture-refactor-compare","source_id":"getyourguide-legacy-code"}
 {"concept_id":"capture-refactor-compare","source_id":"snapall-pr-areas"}
+{"concept_id":"converge-and-ask-only-on-change","source_id":"ansible-idempotency"}
+{"concept_id":"converge-and-ask-only-on-change","source_id":"raymond-rule-of-silence"}
+{"concept_id":"converge-and-ask-only-on-change","source_id":"sre-eliminating-toil"}

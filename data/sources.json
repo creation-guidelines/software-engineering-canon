@@ -18,3 +18,6 @@
 {"id":"fowler-definition-of-refactoring","title":"Definition Of Refactoring","url":"https://martinfowler.com/bliki/DefinitionOfRefactoring.html","author":"Martin Fowler","year":2004}
 {"id":"getyourguide-legacy-code","title":"How We Work Efficiently with Legacy Code (characterization tests)","url":"https://careers.getyourguide.com/posts/how-we-work-efficiently-with-legacy-code","author":"GetYourGuide engineering","year":null}
 {"id":"snapall-pr-areas","title":"snapall pull request 74: the core speaks of areas and locations (output of 24 commands compared byte for byte)","url":"https://github.com/grenudi/snapall/pull/74","author":"grenudi","year":2026}
+{"id":"ansible-idempotency","title":"Ansible glossary: idempotency","url":"https://docs.ansible.com/ansible/latest/reference_appendices/glossary.html","author":"Red Hat","year":null}
+{"id":"raymond-rule-of-silence","title":"The Art of Unix Programming: Basics of the Unix Philosophy (the Rule of Silence; archived copy)","url":"https://web.archive.org/web/20250102222016/http://www.catb.org/esr/writings/taoup/html/ch01s06.html","author":"Eric S. Raymond","year":2003}
+{"id":"sre-eliminating-toil","title":"Site Reliability Engineering, chapter 5: Eliminating Toil","url":"https://sre.google/sre-book/eliminating-toil/","author":"Vivek Rau (Google)","year":2016}
