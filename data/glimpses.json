@@ -8,3 +8,4 @@
 {"id":"g-20261116-144410","at":"2026-11-16T14:44:10Z","by":"claude","kind":"chore","summary":"a mark: the latest runs are observed, as runs - no longer gathered here"}
 {"id":"g-20261116-155404","at":"2026-11-16T15:54:04Z","by":"claude","kind":"chore","summary":"a mark: what the gatherer writes is said where it writes it - no longer named here"}
 {"id":"g-20261117-050140","at":"2026-11-17T05:01:40Z","by":"conveyor","kind":"docs","summary":"A practice: declare the invocation surface once (argenv)","touches":"practices:declared-invocation-surface"}
+{"id":"g-20261118-145533","at":"2026-11-18T14:55:33Z","by":"tad update-pins","kind":"build","summary":"tad 0.7.1: the pin moved, the data and documents re-rendered"}
