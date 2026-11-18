@@ -9,7 +9,6 @@ kind = "canon"
 parent = "open-commons-observatory"
 
 [exports]
-glimpses = "data/glimpses.json"
 principles = "data/principles.json"
 lens_parts = "data/lens_parts.json"
 lens_relations = "data/lens_relations.json"

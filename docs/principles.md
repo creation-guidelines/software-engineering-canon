@@ -178,6 +178,20 @@ Pairs with
 Sources
 : [John Ousterhout on A Philosophy of Software Design (Software Engineering Radio episode 520, transcript excerpts)](https://nikit.tcl-lang.org/page/%7BJohn+Ousterhout+on+A+Philosophy+of+Software+Design%7D+%7BSoftware+Engineering+Radio%7D+%7Bepisode+520%7D+%7B2022+07+12%7D), [Every module is a small language (the rule, its procedure and its worked example)](https://github.com/grenudi/snapall/blob/main/docs/canon/small-languages.md)
 
+<a id="converge-and-ask-only-on-change"></a>
+### Converge, and ask only on a change
+
+A tool run again with nothing changed changes nothing and asks nothing; it knows what it did, and spends a person's attention - a password, hands, a decision - only when something actually changed and only for what is theirs.
+
+Also known as
+: idempotency, convergence, rule of silence
+
+Watch out
+: Idempotency is its mechanism, convergence on a declared state its form, the rule of silence its voice; the attention it saves is the toil SRE counts.
+
+Sources
+: [Ansible glossary: idempotency](https://docs.ansible.com/ansible/latest/reference_appendices/glossary.html), [The Art of Unix Programming: Basics of the Unix Philosophy (the Rule of Silence; archived copy)](https://web.archive.org/web/20250102222016/http://www.catb.org/esr/writings/taoup/html/ch01s06.html), [Site Reliability Engineering, chapter 5: Eliminating Toil](https://sre.google/sre-book/eliminating-toil/)
+
 ## Type-driven design
 
 <a id="illegal-states-unrepresentable"></a>

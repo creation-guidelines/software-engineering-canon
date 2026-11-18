@@ -150,3 +150,33 @@ Considered
 
 Rejected
 : That: a renderer per repository is code every repository must keep; presentation as data is read by people and rendered by one tool.
+
+<a id="2026-11-18-converge-and-ask-only-on-change"></a>
+### A principle: converge, and ask only on a change
+
+Date
+: 2026-11-18
+
+Done
+: Added principle converge-and-ask-only-on-change (core), beside least-astonishment and fail-fast, with three sources opened and cited: Ansible's idempotency, the Rule of Silence (an archived https copy - catb.org serves no https), SRE's eliminating toil. From the author's word 'yes, to canons' (2026-11-18), on ideal-agent's proposal after lpoco-host's plan would have asked his sudo password on every prepare to rewrite a root file it had installed itself.
+
+Considered
+: Folding it into least-astonishment (that one is about names matching behaviour, not about re-runs and asking).
+
+Rejected
+: A practice instead of a principle (it constrains design, not a procedure); naming it idempotency alone (idempotency says nothing of when to ask a person).
+
+<a id="2026-11-18-no-glimpse-export"></a>
+### The canon no longer exports glimpses
+
+Date
+: 2026-11-18
+
+Done
+: Removed 'glimpses = data/glimpses.json' from oco.toml's exports. With it, land asked every change here for an ocoeco glimpse, a route the author retired on 2026-11-17 (ideal-agent's routes table; decision lab-agent-0). Nothing in this repository's Makefile, CI or tables reads the glimpses; the observatory's harvest was their only reader. data/glimpses.json stays as the record of what was said here until now.
+
+Considered
+: Dropping land's glimpse rule for every repository (lab-machine's to decide; this repository's export was the cause here).
+
+Rejected
+: Recording an ocoeco glimpse to get past land (the retired route).
