@@ -16,3 +16,7 @@ Commits follow [Conventional Commits](https://www.conventionalcommits.org/) and 
 
 ## Status
 This repo was the design spike for [text-as-data-template](https://github.com/creation-guidelines/text-as-data-template). No license has been chosen yet.
+
+## Licence
+
+The knowledge (the data, the pages rendered from it, the prose) is [CC-BY-SA-4.0](LICENSE-CC-BY-SA-4.0). The scripts, queries, records and schema are MIT OR Apache-2.0 at your choice: [LICENSE-MIT](LICENSE-MIT), [LICENSE-APACHE](LICENSE-APACHE). `sh bin/check-licences.sh` (run in CI) checks that every tracked file is covered; REUSE.toml says which.
