@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.4.0](https://github.com/creation-guidelines/software-engineering-canon/compare/v1.3.0...v1.4.0) (2026-11-20)
+
+
+### Features
+
+* licences: CC-BY-SA-4.0 for the knowledge, MIT OR Apache-2.0 for the code ([#39](https://github.com/creation-guidelines/software-engineering-canon/issues/39)) ([0c007e4](https://github.com/creation-guidelines/software-engineering-canon/commit/0c007e46d31579f299e333ee1dbae927c0084691))
+* SQL is back: make sql, tad engine in setup, the recipe ([#26](https://github.com/creation-guidelines/software-engineering-canon/issues/26)) ([b5520b2](https://github.com/creation-guidelines/software-engineering-canon/commit/b5520b2313df970a83e7ceb1bcfd7dd2f6aa3c41))
+* the canon follows ideal-knowledge-base 0.20.0 ([#37](https://github.com/creation-guidelines/software-engineering-canon/issues/37)) ([3c7c4bd](https://github.com/creation-guidelines/software-engineering-canon/commit/3c7c4bdfb173ea0df80c86dff1ec890c37c05f52))
+
 ## [1.3.0](https://github.com/creation-guidelines/software-engineering-canon/compare/v1.2.1...v1.3.0) (2026-10-28)
 
 
